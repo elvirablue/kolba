@@ -1,0 +1,63 @@
+.variant {
+	.cont-fluid();
+
+	&__block-wr {
+		width: 100%;
+		margin-bottom: 30px;
+		border: 1px solid rgb(227, 226, 226);
+		border-radius: 10px;
+  		background-color: rgb(255, 255, 255);
+  		box-shadow: 0px 2px 24.44px 1.56px rgba(14, 14, 14, 0.08);
+  		overflow: hidden;
+
+  		.row {
+  			padding: 0 50px;
+  			@media @tablet-widths {padding: 0 30px; }
+        	@media @mobil-widths { padding: 30px 0;}
+  		}
+	}
+
+	&__block-title {
+		background-color: rgb(255, 221, 0);
+		border-bottom: 2px solid #d7bb03;
+		.text-bold(30px);
+		line-height: 1.2;
+		text-align: center;
+		padding: 15px;
+		@media @tablet-widths {font-size: 24px; }
+        @media @mobil-widths { font-size: 20px;}
+	}
+
+	&__block-text-b {
+		.text-bold(33px);
+		line-height: 1.2;
+		text-align: center;
+		padding: 30px;
+		@media @tablet-widths {font-size: 26px; }
+        @media @mobil-widths { font-size: 22px; padding: 20px;}
+	}
+
+	&__block-border-yellow {
+		display: block;
+		width: 100%;
+		border-radius: 10px;
+		border: 2px solid  @color-yellow;
+		.text-bold(30px);
+		line-height: 1.2;
+		text-align: center;
+		padding: 50px;
+		background: url(../img/bg-form.png) no-repeat right center;
+
+		@media @tablet-widths {font-size: 24px; padding: 30px;background-size: contain;}
+        @media @mobil-widths { font-size: 20px; padding: 20px;background-image: none;}
+	}
+	
+	&__list-wr {
+		padding: 20px;
+		 @media @mobil-widths {padding: 0 20px;}
+	}
+
+	ul.style-list {
+		@media @mobil-widths {padding: 0; margin-bottom: 0;}
+	}
+}

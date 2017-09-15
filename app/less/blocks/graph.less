@@ -1,0 +1,73 @@
+.graph-bg {
+	width: 100%;
+	background-color: @color-bg-black;
+	padding: 70px 0;
+
+	@media @mobil-widths {padding: 40px 0;}
+}
+
+.graph {
+	.cont-fluid();
+
+
+	&__text {
+		.text-light(34px);
+		color: @color-text-w;
+		text-align: center;
+		@media @mobil-widths {
+			font-size: 22px;
+		}
+	}
+
+	&__num {
+		display: block;
+		margin: 0 auto;
+		padding-top: 47px;
+		.text-bold(42px);
+		color: @color-text-b;
+		text-align: center;
+	}
+
+	&__img {
+		display: block;
+		margin: 0 auto;
+		background-image: url(../img/sprite.png);
+		background-size: auto;
+		background-repeat: no-repeat;
+		width: 150px;
+		height: 150px;
+		@media @tablet-widths {
+			
+		}
+
+		@media @mobil-widths { margin-bottom: 20px;	}
+	}
+
+	&__city {
+		display: inline-block;
+		.text-light(30px);
+		color: @color-text-w;
+		padding: 0 30px;
+		@media @mobil-widths { font-size: 22px;	}
+	}
+
+	&__city:before {
+		display: inline-block;
+		vertical-align: middle;
+		content: "";
+		width: 40px;
+		height: 55px;
+		background-image: url(../img/sprite.png);
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: -710px -10px;
+	}
+
+	@media (max-width: 344px) {
+		.col-xs-6 {
+			margin: 0 -5px;
+		}
+	}
+
+	
+}

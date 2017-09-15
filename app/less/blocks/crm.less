@@ -1,0 +1,41 @@
+.crm-bg {
+	width: 1250px;
+	height: auto;
+	min-height: 480px;
+	margin: 0 auto;
+	background: url(../img/bg-mac.png) no-repeat 110% bottom ;
+	background-size: auto;
+	@media @tablet-widths {
+			width: 820px;
+			margin: 0 auto;
+			min-height: 400px;
+			background-size: 620px 250px;
+			background-position: 150% bottom;
+		}
+	@media @mobil-widths { 
+		width: 100%;
+		padding-bottom: 190px;	
+		background-size: 446px 180px;
+		background-position: center bottom;
+	}
+}
+
+.crm {
+	.cont-fluid();
+
+	.button {
+		margin-top: 50px;
+		@media @mobil-widths {margin-top: 20px;}
+	}
+
+	p {
+		line-height: 1.3;
+    	padding: 15px 40px 15px 40px;
+    	text-align: left;
+    	@media @tablet-widths {padding: 15px 0px 15px 10px;}
+	}
+
+	&__bg {
+		
+	}
+}

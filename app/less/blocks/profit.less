@@ -1,0 +1,24 @@
+.profit {
+	.cont-fluid();
+	padding-top: 50px;
+	@media @mobil-widths { padding-top: 20px;}
+
+	&__calc-text {
+		.text-light(30px);
+		line-height: 1.5;
+		text-align: center;		
+		padding-top: 20px;
+		@media @tablet-widths {font-size: 22px; }
+        @media @mobil-widths { font-size: 18px;}
+	}
+
+	&__calc-result {
+		.text-bold(40px);
+		line-height: 1;
+		text-align: center;
+		padding-bottom: 30px;
+		@media @tablet-widths {font-size: 28px; }
+        @media @mobil-widths { font-size: 22px; padding-bottom: 0px;}
+	}
+
+}

@@ -1,0 +1,39 @@
+ul.style-list {
+		display: block;
+		list-style: none;
+		padding-top: 30px;
+		padding-left: 35px;
+		width: 100%;
+		height: auto;
+		@media @mobil-widths {
+			
+			padding-bottom: 20px;
+		}
+
+		li {
+			display: block;
+			.text-light(18px);
+			padding-bottom: 10px;
+			position: relative;
+			text-align: left;
+
+			@media @mobil-widths {
+				font-size: 16px;
+				padding-bottom: 15px;
+				margin-left: 40px;
+			}
+			
+		}
+
+		li:before {
+			display: inline-block;			
+			vertical-align: top;
+			position: absolute;
+			top: 0;
+			left: -35px;
+			content: "";
+			width: 23px;
+			height: 23px;
+			background: url(../img/sprite.png) no-repeat -564px -18px;
+		}
+	}

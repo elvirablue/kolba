@@ -1,0 +1,46 @@
+.benefit-bg {
+	width: 100%;
+	background-color: @color-bg-black;
+	padding: 30px 0;
+}
+
+.benefit {
+	.cont-fluid();
+
+	&__img {
+		display: inline-block;
+		vertical-align: middle;
+		background-image: url(../img/sprite.png);
+		background-size: auto;
+		background-repeat: no-repeat;
+		width: 80px;
+		height: 100px;
+		@media @tablet-widths {
+			
+		}
+
+		@media @mobil-widths {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: middle;
+		.text-light(26px);
+		text-transform: uppercase;
+		color: @color-text-w;
+		width: ~'calc(100% - 85px)';
+		@media @tablet-widths {
+			font-size: 17px;
+			margin-left: 0px;
+		}
+		@media @mobil-widths {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}
