@@ -24,10 +24,11 @@
 	<script src="bootstrap/js/bootstrap.js"></script>	
 	<script src="js/venders/jquery.maskedinput.js"></script>
 	<script src="js/venders/jquery.sticky.js"></script>
-	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>	
+	<script src="js/venders/jquery.circliful.min.js"></script>
 	<script> 
     	$(window).load(function(){ 
-    		$("#header-sticky-wrapper").sticky({ topSpacing: 0 }); 
+    		 
     		$("input[name^='user-phone']").mask("+7 (999) 999-9999");
     	}); 
     </script>
@@ -63,7 +64,7 @@
 			</p>	
 			<div class="main-header__phone">				
 				<a href="tel:+88002000500" class="phone">8 800 2000 500</a>
-				<a href="#" class="link">Заказать звонок</a>
+				<a href="#" class="link js-btn-modal">Заказать звонок</a>
 			</div>		
 		</div>
 		
@@ -77,7 +78,7 @@
 				<h1 class="black">Открой фирменный магазин самогонных аппаратов «Колба»&nbsp;и&nbsp;зарабатывай</h1>
 				<p class="yellow">от&nbsp;&nbsp;210&nbsp;000&nbsp;<b>&#8381;</b>&nbsp;&nbsp;до 740&nbsp;000&nbsp;<b>&#8381;</b>&nbsp;&nbsp;В&nbsp;&nbsp;МЕСЯЦ!</p>
 			</div>
-			<button type="button" class="button">Скачать презентацию</button>
+			<button type="button" class="button js-btn-modal">Скачать презентацию</button>
 		</div>	
 	</div>
 
@@ -271,7 +272,7 @@
         		</div>				
 			</div>
 			<br><br>
-			<button type="button" class="button">Связаться с нами</button>
+			<button type="button" class="button js-btn-modal">Связаться с нами</button>
 		</div>
 		
 	</div>
@@ -284,7 +285,7 @@
 		<div class="fransh-bg-book"></div>
 		<div class="row flex">
 			<div class="col-xs-12 col-1-3">
-				<button type="button" class="button fransh__btn">Скачать презентацию</button>
+				<button type="button" class="button js-btn-modal fransh__btn">Скачать презентацию</button>
 			</div>
 			<div class="col-xs-12 col-2-3">
 				<div class="block-border-shadow">
@@ -343,27 +344,19 @@
 				<div class="hidden-xs hidden-sm col-md-2"></div>
 				<div class="col-xs-6 col-sm-3 col-md-2">
 					<p class="graph__text">Казань</p>
-					<p class="graph__img" style="background-position: -27px -373px;">
-						<b class="graph__num">76%</b>
-					</p>
+					<div id="demo1" ></div>					
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-2">
 					<p class="graph__text">Москва</p>
-					<p class="graph__img" style="background-position: -227px -373px;">
-						<b class="graph__num">92%</b>
-					</p>
+					<div id="demo2" ></div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-2">
 					<p class="graph__text">Сочи</p>
-					<p class="graph__img" style="background-position: -427px -373px;">
-						<b class="graph__num">23%</b>
-					</p>
+					<div id="demo3" ></div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-2">
 					<p class="graph__text">Тюмень</p>
-					<p class="graph__img" style="background-position: -627px -373px;">
-						<b class="graph__num">47%</b>
-					</p>
+					<div id="demo4" ></div>
 				</div>
 				<div class="hidden-xs hidden-sm col-md-2"></div>				
 			</div>
@@ -378,7 +371,7 @@
 			<br><br>			
 		</div>
 		
-		<button type="button" class="button">Оставить заявку</button>
+		<button type="button" class="button js-btn-modal">Оставить заявку</button>
 	</div>
 
 	<!-- *************************** Фирменная CRM-система ***************************************- -->
@@ -391,7 +384,7 @@
 				<div class="col-xs-12 col-sm-6 col-md-6">
 					<p>Наша CRM&#8209;система облегчает работу вашим продовцам и вам, так как создана максимально просто в отличии от универсальных ПО</p>
 					<p>Вы можете следить за вашим бизнесом онлайн с любой точки земного шара</p>					
-					<button type="button" class="button">Узнать подробнее</button>
+					<button type="button" class="button js-btn-modal">Узнать подробнее</button>
 				</div>
 				<div class="hidden-xs col-sm-6 col-md-6"></div>
 			</div>
@@ -408,11 +401,11 @@
 			<div class="col-xs-12 col-sm-4 col-md-4">
 				<div class="ch_wrapper">
 				<!-- можно поменять на type="radio" -->
-					<input id="check1" type="checkbox" name="check" value="1">
+					<input id="check1" type="radio" name="radio" value="1">
 					<label for="check1">Город до 99 тыс человек </label>
 				</div>
 				<div class="ch_wrapper">
-					<input id="check2" type="checkbox" name="check" value="100">
+					<input id="check2" type="radio" name="radio" value="100">
 					<label for="check2">Город от 100 тыс человек </label>
 				</div>
 			</div>
@@ -639,8 +632,8 @@
 						<p class="form__title">Оставьте заявку чтобы получить финансовую модель</p>
 						<hr width="150px" style="background-color: #ffdd00; height: 4px; margin-top: 30px;">
 						<p class="form__subtitle">Наш менеджер свяжется с Вами<br>в течение <b>15 минут</b></p>
-						<input type="text" class="input" name="user-name" placeholder="Ваше имя">
-						<input type="text" class="input" name="user-phone" placeholder="Ваш телефон">
+						<input type="text" class="input required" name="user-name" placeholder="Ваше имя">
+						<input type="text" class="input required" name="user-phone" placeholder="Ваш телефон">
 						<button type="submit" class="button">Оставить заявку</button>
 
 						<p class="form__subtitle center">Мы уже ждем твой звонок!</p>
@@ -667,7 +660,7 @@
 			</p>	
 			<div class="main-footer__phone">				
 				<a href="tel:+88002000500" class="phone">8 800 2000 500</a>
-				<a href="#" class="link">Заказать звонок</a>
+				<a href="#" class="link js-btn-modal">Заказать звонок</a>
 			</div>		
 		</div>
 
@@ -680,11 +673,27 @@
 	<div class="modal_wrapper">  </div>
 	<div class="modal js-modal">	  
 	    <button class="modal_close" type="button">Закрыть</button>
-	    <h3 id="modal_title">Почему ?</h3>
-	    <div id="modal_text">
-	    	
-	    </div>
+	    <form action="" method="post" class="form">
+	    	<p class="form__title">Оставьте заявку чтобы получить финансовую модель</p>
+	    	<hr width="150px" style="background-color: #ffdd00; height: 4px; margin-top: 30px;">
+	    	<p class="form__subtitle">Наш менеджер свяжется с Вами в&nbsp;течение&nbsp;<b>15&nbsp;минут</b></p>
+	    	<input type="text" class="input required" name="user-name" placeholder="Ваше имя" >
+	    	<input type="text" class="input required" name="user-phone" placeholder="Ваш телефон" >
+	    	<button type="submit" class="button">Оставить заявку</button>
+	    	<p class="form__subtitle center">Мы уже ждем твой звонок!</p>
+	    </form>
 	  </div>
+	</div>
+
+	<div style="display: none;">
+	    <div class="box-modal" id="exampleModal">
+	      <div class="">        
+	        <div class="box-modal_close arcticmodal-close">x</div>
+	        <h3>Спасибо за заявку!</h3>
+	        <hr>
+	        <p>Мы свяжемся с Вами в ближайшее время.</p>
+	      </div>
+	    </div>
 	</div>
 
 <!-- ********************************- -->
@@ -714,11 +723,13 @@
 	$( "#amount2").text('3468');
 	
 </script>
-<!--<script src="js/modal.js"> </script>
-
 <script src="js/venders/wow.min.js"></script>
-<script src="js/wow.js"></script>
--->
+<script src="js/modal.js"> </script>
+<script src="js/post.js"> </script>
+
+
+<!--<script src="js/wow.js"></script>-->
+
 
 
 </body>

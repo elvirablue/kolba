@@ -12,6 +12,9 @@
 	background: url(../img/bg-form.png) no-repeat right 100px;
 	background-size: auto; 
 	padding-right: 20px;
+	@media @mobil-widths {
+		background-image: none;
+	}
 
 	&__img {
 		width: 100%;
@@ -20,17 +23,22 @@
 		min-height: 550px;
 		background: url(../img/photo-form.jpg) no-repeat center;
 		background-size: cover; 
-		@media @mobil-widths {min-height: 300px;}
+		@media @mobil-widths {min-height: 300px; width: 100vw;}
 	}
 
 	&__title {
 		.text-bold(26px);
 		padding-top: 65px;
+		@media @mobil-widths {
+			font-size: 20px;
+			padding-top: 40px;
+		}
 	}
 
 	&__subtitle {
 		padding-top: 20px;
 		padding-bottom: 30px;
+		@media @mobil-widths {padding-bottom: 15px;}
 	}
 
 	.input {
@@ -43,6 +51,7 @@
   		border-radius: 25px;
   		outline: none;
   		padding: 0 30px;
+  		@media @mobil-widths {margin-bottom: 15px;}
 		
 	}
 }

@@ -19,13 +19,20 @@
 		}
 	}
 
-	&__num {
+	&__num, .timer {
 		display: block;
 		margin: 0 auto;
 		padding-top: 47px;
 		.text-bold(42px);
 		color: @color-text-b;
 		text-align: center;
+		padding-left: 3px;
+
+		tspan {font-size: inherit;}
+	}
+
+	.border {
+		box-shadow: 0px 0px 40px 0px rgba(255, 221, 0, 0.1);
 	}
 
 	&__img {
